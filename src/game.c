@@ -756,7 +756,7 @@ void reset_game()
     XGM_setPCM(SPLASH_EFFECT, splash, sizeof(splash));
     XGM_setPCM(BONUS_EFFECT,  ring,   sizeof(ring));
 
-    VDP_clearPlane(BG_A, FALSE);
+    VDP_clearPlane(BG_A, TRUE);
 
     display_score(TRUE);
 
@@ -817,7 +817,7 @@ void update_ranking_input()
 
 void hide_ranking_input()
 {
-    VDP_clearPlane(BG_A, FALSE);
+    VDP_clearPlane(BG_A, TRUE);
     display_score(TRUE);
     if (key_sel_sprite)
     {
